@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="kontakt.css">
+    <title>Kontakt - Buchman Fotografia</title>
+</head>
+<body>
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <div class="main-navigation__logo">
+                <a href="index.html" class="main-navigation__logo-link">
+                    Buchman Fotografia
+                </a>
+            </div>
+            <ul class="main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a href="portfolio.html" class="main-navigation__link">
+                        Portfolio
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="about.html" class="main-navigation__link">
+                        O mnie
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#" class="main-navigation__link">
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h3>Formularz kontaktowy</h3>
+
+<div class="container">
+  <form action="mailto:buchmanfotografia@gmail.com" method="get">
+    <label for="fname">Imię</label>
+    <input type="text" id="fname" name="fname" placeholder="Twoje imie..">
+
+    <label for="lname">Nazwisko</label>
+    <input type="text" id="lname" name="lname" placeholder="Twoje nazwisko..">
+    <label for="subject">Temat</label>
+    <input type="text" id="subject" name="subject" placeholder="Temat..">
+
+    <label for="subject">Treść</label>
+    <textarea id="body" name="body" placeholder="Napisz coś.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>

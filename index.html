@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="icon" type="image/png" href="images/ikona.jpg">
+    <title>Buchman Fotografia</title>
+</head>
+<body>
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <div class="main-navigation__logo">
+                <a href="#" class="main-navigation__logo-link">
+                    Buchman Fotografia
+                </a>
+            </div>
+            <ul class="main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a href="portfolio.html" class="main-navigation__link">
+                        Portfolio
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="about.html" class="main-navigation__link">
+                        O mnie
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="kontakt.html" class="main-navigation__link">
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="images/slide/1 (1).jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="images/slide/1.jpg" style="width: 50%;margin-left: 12.5vw;">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="images/slide/2.jpg" style="width: 50%;margin-left: 12.5vw;">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/slide/5.jpg" style="width: 50%;margin-left: 12.5vw;">
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+</html>
